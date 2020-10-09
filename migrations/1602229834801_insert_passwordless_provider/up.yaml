@@ -1,0 +1,5 @@
+- args:
+    cascade: false
+    read_only: false
+    sql: insert into auth.providers(provider) values ('passwordless');
+  type: run_sql

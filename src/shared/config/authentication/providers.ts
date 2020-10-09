@@ -80,6 +80,15 @@ if (castBooleanEnv('WINDOWS_LIVE_ENABLE')) {
   }
 }
 
+// Passwordless provider settings
+if (castBooleanEnv('PASSWORDLESS_ENABLE')) {
+  PROVIDERS.passwordless = {
+    deliverBaseUrl: process.env.PASSWORDLESS_DELIVER_BASE_URL,
+    expireDuration : process.env.PASSWORDLESS_EXPIRE_TIME, // In seconds
+    resendDuration : process.env.PASSWORDLESS_RESEND_TIME,
+  }
+}
+
 export { PROVIDERS }
 
 // True if at least one of the providers is enabled
