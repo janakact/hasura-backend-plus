@@ -29,6 +29,9 @@
 For detailed usage and installation instructions check out the [documentation](https://nhost.github.io/hasura-backend-plus/).
 
 ---
+## PAsswordless
+- Fix otp for testing purposes. 
+- Set it like this using environment variable. Keep it empty for normal mode. 'PASSWORDLESS_FIXED_OTP=1111'
 
 ## Core Features:
 
