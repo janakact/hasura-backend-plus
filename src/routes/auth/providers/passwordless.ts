@@ -44,6 +44,7 @@ class PasswordlessStrategy implements Strategy {
         const DELIVER_BASE_URL = this.options.deliverBaseUrl
         const EXPIRE_DURATION = this.options.expireDuration * 1000 // Convert to millis
         const RESEND_DURATION = this.options.resendDuration * 1000 // Convert to millis
+        const FIXED_OTP = this.options.fixedOtp
         console.log("COnfiguration ", DELIVER_BASE_URL, EXPIRE_DURATION, RESEND_DURATION)
 
         const { phoneNumber, otp } = req.query as { phoneNumber: string, otp: string }
@@ -56,7 +57,7 @@ class PasswordlessStrategy implements Strategy {
             throw Boom.badRequest("Too Early to resend OTP")
         }
         else if (!otp) {
-            const newOtp = `${Math.floor(1000 + Math.random() * 9000)}`
+            const newOtp = FIXED_OTP || `${Math.floor(1000 + Math.random() * 9000)}`
             otpStore[phoneNumber] = { otp: newOtp, createdTime: Date.now() }
             console.log("New otp", newOtp)
             return deliver(DELIVER_BASE_URL, phoneNumber, newOtp).then((success: boolean) => {

@@ -86,6 +86,7 @@ if (castBooleanEnv('PASSWORDLESS_ENABLE')) {
     deliverBaseUrl: process.env.PASSWORDLESS_DELIVER_BASE_URL,
     expireDuration : process.env.PASSWORDLESS_EXPIRE_TIME, // In seconds
     resendDuration : process.env.PASSWORDLESS_RESEND_TIME,
+    fixedOtp : process.env.PASSWORDLESS_FIXED_OTP || undefined,
   }
 }
 
