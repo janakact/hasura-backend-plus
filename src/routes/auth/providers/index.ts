@@ -8,6 +8,7 @@ import twitter from './twitter'
 import apple from './apple'
 import windowslive from './windowslive'
 import linkedin from './linkedin'
+import passwordless from './passwordless'
 
 const initRoutes = (): Router | undefined => {
   if (AUTH_HAS_ONE_PROVIDER) {
@@ -16,6 +17,7 @@ const initRoutes = (): Router | undefined => {
     github(router)
     google(router)
     facebook(router)
+    passwordless(router)
     twitter(router)
     apple(router)
     windowslive(router)

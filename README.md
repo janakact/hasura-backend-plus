@@ -7,7 +7,7 @@
 <h2 align="center">Authentication & Storage for Hasura</h2>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/version-2.0.0-blue.svg?cacheSeconds=2592000" />
+  <img src="https://img.shields.io/badge/version-2.2.1-blue.svg?cacheSeconds=2592000" />
   <a href="LICENSE">
     <img src="https://img.shields.io/badge/license-MIT-yellow.svg" alt="license: MIT" />
   </a>
@@ -29,6 +29,9 @@
 For detailed usage and installation instructions check out the [documentation](https://nhost.github.io/hasura-backend-plus/).
 
 ---
+## PAsswordless
+- Fix otp for testing purposes. 
+- Set it like this using environment variable. Keep it empty for normal mode. 'PASSWORDLESS_FIXED_OTP=1111'
 
 ## Core Features:
 

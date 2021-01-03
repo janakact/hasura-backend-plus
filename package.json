@@ -16,7 +16,7 @@
     "start": "node -r ./dist/start.js",
     "test": "NODE_ENV=test jest --coverage --forceExit --runInBand",
     "test:ci": "NODE_ENV=ci jest --coverage --forceExit --runInBand",
-    "test:watch": "NODE_ENV=test jest --watch",
+    "test:watch": "NODE_ENV=test jest --watchAll --maxWorkers=1",
     "report-coverage": "codecov"
   },
   "config": {
@@ -28,6 +28,7 @@
     "@hapi/boom": "9.1.0",
     "@hapi/joi": "17.1.1",
     "@nicokaiser/passport-apple": "^0.2.1",
+    "@types/passport-strategy": "^0.2.35",
     "archiver": "4.0.1",
     "aws-sdk": "2.656.0",
     "bcryptjs": "^2.4.3",
@@ -63,6 +64,7 @@
     "passport-github2": "0.1.12",
     "passport-google-oauth20": "2.0.0",
     "passport-linkedin-oauth2": "^2.0.0",
+    "passport-strategy": "^1.0.0",
     "passport-twitter": "^1.0.4",
     "passport-windowslive": "^1.0.2",
     "qrcode": "1.4.4",
